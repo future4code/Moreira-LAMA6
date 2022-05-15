@@ -1,0 +1,48 @@
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+"name":"Olivia", 
+"email":"pimpa@lab.com",
+"password":"pimpa123",
+"role":"NORMAL"
+}
+
+###
+
+POST http://localhost:3003/users/signup
+Content-Type: application/json
+
+{
+"name":"Thor", 
+"email":"thor@lab.com",
+"password":"thor123",
+"role":"ADMIN"
+}
+
+###
+
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+"email":"pimpa@lab.com",
+"password":"pimpa123"
+}
+
+###
+
+POST http://localhost:3003/band/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNkYmUzM2VkLTBjMzItNGVlOS1hMThmLTgzYjM2ODk4MzZmNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjU3ODgzMSwiZXhwIjoxNjUyNTgwMjcxfQ.H9L-VeIHazMx4r6nTX4P7dbDv23gij8FFzWT7T7y94E
+
+{
+"name": "Oliviaa",
+"music_genre": "Pisadinha",
+"responsible": "Pimpinha"
+}
+
+###
+
+GET http://localhost:3003/band/Oliviaa
+Content-Type: application/json
