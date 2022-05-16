@@ -4,9 +4,10 @@ import { UserInputDTO } from '../model/User';
 import { LoginInputDTO } from '../model/User';
 
 export default class UserController {
-    userBusiness = new UserBusiness()
+    
+    constructor(private userBusiness: UserBusiness){}
 
-    signUp = async(req: Request, res:Response) => {
+    public signUp = async(req: Request, res:Response) => {
         const {name, email, password, role} = req.body
 
         const input: UserInputDTO = {
@@ -26,7 +27,7 @@ export default class UserController {
         }
     }
 
-    login = async(req:Request, res: Response) => {
+    public login = async(req:Request, res: Response) => {
         const {email, password} = req.body
         const input: LoginInputDTO = {
             email,

@@ -62,10 +62,6 @@ export default class ShowsBusiness {
         return result
     })
 
-    const bands = shows && shows.map((band) => {
-      return 
-    })
-
-    return shows
+    return registeredShow
     }
 }
