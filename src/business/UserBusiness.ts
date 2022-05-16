@@ -8,10 +8,17 @@ import { UserInputDTO } from "../model/User";
 
 
 export default class UserBusiness {
-  userData = new UserDatabase()
-  idGenerator = new IdGenerator()
-  authenticator = new Authenticator()
-  hashManager = new HashManager()
+  // userData = new UserDatabase()
+  // idGenerator = new IdGenerator()
+  // authenticator = new Authenticator()
+  // hashManager = new HashManager()
+
+  constructor(
+    private userDatabase: UserDatabase,
+    private idGenerator: IdGenerator,
+    private authenticator: Authenticator,
+    private hashManager: HashManager
+ ) { }
 
   signUp = async (input: UserInputDTO) => {
   
@@ -22,7 +29,7 @@ export default class UserBusiness {
         throw new Error("Favor preencher todos os campos")
     }
 
-    const registeredUser = await this.userData.findByEmail(email)
+    const registeredUser = await this.userDatabase.findByEmail(email)
       if(registeredUser){
         throw new Error("Email já cadastrado")
     }
@@ -31,7 +38,7 @@ export default class UserBusiness {
     const hashPassword = await this.hashManager.hash(password)
 
     const newUser = new User(id, name, email, hashPassword, User.stringToUserRole(role))
-    await this.userData.insert(newUser)
+    await this.userDatabase.insert(newUser)
 
     const newRole = User.stringToUserRole(role)
     
@@ -46,7 +53,7 @@ export default class UserBusiness {
         throw new Error("Favor informar email e senha")
     }
 
-    const registeredUser = await this.userData.findByEmail(email)
+    const registeredUser = await this.userDatabase.findByEmail(email)
     if(!registeredUser){
       throw new Error("Este email não está cadastrado.")
   }
