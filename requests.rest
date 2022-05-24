@@ -2,10 +2,10 @@ POST http://localhost:3003/users/signup
 Content-Type: application/json
 
 {
-"name":"Olivia", 
-"email":"pimpa@lab.com",
-"password":"pimpa123",
-"role":"NORMAL"
+"name":"Julia", 
+"email":"juju@lab.com",
+"password":"abacate",
+"role":"ADMIN"
 }
 
 ###
@@ -26,8 +26,8 @@ POST http://localhost:3003/users/login
 Content-Type: application/json
 
 {
-"email":"pimpa@lab.com",
-"password":"pimpa123"
+"email":"juju@lab.com",
+"password":"abacate"
 }
 
 ###
@@ -44,30 +44,30 @@ Content-Type: application/json
 
 POST http://localhost:3003/band/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNkYmUzM2VkLTBjMzItNGVlOS1hMThmLTgzYjM2ODk4MzZmNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjU3ODgzMSwiZXhwIjoxNjUyNTgwMjcxfQ.H9L-VeIHazMx4r6nTX4P7dbDv23gij8FFzWT7T7y94E
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwMDYxZGYwLTg4NzgtNDJiZC1iNjUwLTAwNTgwYjI4NWE4YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MzQwMzUwNCwiZXhwIjoxNjUzNDA0OTQ0fQ.72zHXFGWshhfN86vrgKMAdcABJPp13ou66bDAnZurrc
 
 {
-"name": "Oliviaa",
-"music_genre": "Pisadinha",
-"responsible": "Pimpinha"
+"name": "juju e os abacates",
+"music_genre": "Rap",
+"responsible": "Vovó Juju"
 }
 
 ###
 
-GET http://localhost:3003/band/Oliviaa
+GET http://localhost:3003/band/juju e os abacates
 Content-Type: application/json
 
 ###
 
 POST http://localhost:3003/show/create
 Content-Type: application/json
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImNkYmUzM2VkLTBjMzItNGVlOS1hMThmLTgzYjM2ODk4MzZmNSIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MjY2NDE1NSwiZXhwIjoxNjUyNjY1NTk1fQ.JcVSDrXCIsH2uiynydjBPM_B_XCXSjQz8te3qyJHfe4
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjMwMDYxZGYwLTg4NzgtNDJiZC1iNjUwLTAwNTgwYjI4NWE4YyIsInJvbGUiOiJBRE1JTiIsImlhdCI6MTY1MzQwMzUwNCwiZXhwIjoxNjUzNDA0OTQ0fQ.72zHXFGWshhfN86vrgKMAdcABJPp13ou66bDAnZurrc
 
 {
 "week_day": "SEXTA",
 "start_time": 16,
 "end_time": 19,
-"band_id": "31273589-5ad0-4a52-bfad-adeddaa53445"
+"band_id": "8850804d-695a-491d-b147-fb982f9c403f"
 }
 
 ###
